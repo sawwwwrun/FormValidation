@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body style="background-color: wheat; color: black;font-family: Georgia, 'Times New Roman', Times, serif; ">
+    <h1>User Profiles</h1>
+    <div class="baxx">
+        <div class="container-1">
+        <input type="search" class="form-control" id="searching" oninput="search()" placeholder="Search Area">
+        <span id="searchErr"></span>
+        <small id="srch" style="color: blue;"></small>
+    </div>
+      </div>
+    <div id="error"></div>
+    <div class="container mt-4">
+    <div id="formContainer">
+    <form id="form" class="needs-validation">
+        <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter name">
+            <span class="invalid-feedback" id="nameErr"></span>
+            <!-- <small style="color: red;" id="nameErr" class="invalid-feedback"></small> -->
+        </div>
+        <div class="form-group col-md-6">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+          <span class="invalid-feedback" id="emailErr"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label>Contact Number</label>
+            <input type="text" class="form-control" id="contact" placeholder="Enter your number">
+            <span class="invalid-feedback" id="numErr"></span>
+        </div>
+        </div>
+        <div class="form-row ">
+        <div class="form-group col-md-6">
+            <label for="birth">Date of birth</label>
+            <input type="date" id="dob" class="form-control md-5" name="dateofbirth">
+            <span class="invalid-feedback" id="dobErr"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label>Gender</label>
+            <select id="gender" name="gender" class="form-control md-5">
+                <option></option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <span class="invalid-feedback" id="genderErr"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label>Education</label>
+            <select id="education" class="form-control md-5">
+                <option></option>
+                <option value="mba">MBA</option>
+                <option value="bsc">Bsc</option>
+                <option value="btech">BTech</option>
+            </select>
+            <span class="invalid-feedback" id="eduErr"></span>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-12">
+            <label>Occupation</label>
+            <input type="text" class="form-control md-5" id="occupation" placeholder="Enter your occupation">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Username</label>
+            <input type="text" id="username" class="form-control md-5" placeholder="Enter unique username">
+            <span class="invalid-feedback" id="usernameErr"></span>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="exampleInputPassword1">Password</label>
+            <!-- <p style="display: flex;"> -->
+                <input type="password" class="form-control md-5" id="password" placeholder="Password">
+            <!-- <i id="icon" class="far fa-eye-slash" style="margin-left: 10px; margin-top: 6px;" onclick="togglePassword()"></i></p> -->
+            <input type="checkbox" onclick="togglePassword()"> show password
+          <span class="invalid-feedback" id="pswdErr"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label>PAN number</label>
+            <input type="text" id="pan" class="form-control md-5" placeholder="Enter PAN number">
+            <span class="invalid-feedback" id="panErr"></span>
+        </div>
+        </div>
+        <div class="form-group col-md-6">
+                <label>Upload Image</label>
+                <input type="file" class="form-control md-5" id="img">
+                <span class="invalid-feedback" id="imgErr"></span>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <div class="button-wrapper"><button type="submit" class="btn btn-primary" id="sub">Submit</button></div>
+            
+        </div>
+    </div>
+      </form>
+    </div>
+</div>
+    <div class="container mt-4">
+        <div id="searchResultDisplay" class="search"></div>
+    </div>
+</body>
+</html>
